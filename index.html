@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>María Mieres · Fisioterapia de suelo pélvico y Sexología · Gijón, Avilés y online</title>
+<meta name="description" content="María Mieres, fisioterapeuta especializada en suelo pélvico y sexóloga. Consulta en Gijón y Avilés y sesiones online. Un espacio seguro para comprender tu cuerpo.">
+<meta name="theme-color" content="#FBF6F1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF6F1; --plum:#3B2B33; --terra:#B8654F; --terra-d:#a2563f;
+  --sand:#E9D3C8; --sand-l:#F4E8E0; --sage:#8E9F8B; --sage-l:#E7ECE4; --star:#D9A441;
+  --wa:#25D366; --muted:#6f5f66; --line:rgba(59,43,51,.12);
+  --serif:'Fraunces',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+  --gutter:20px; --nav-h:64px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 8px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--plum);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,p,ul{margin:0}
+ul{padding:0;list-style:none}
+button{font:inherit;color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 var(--gutter)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:6px}
+
+/* icons */
+.ic{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.icf{width:1.15em;height:1.15em;flex:none;fill:currentColor}
+
+/* type */
+.eyebrow{font-size:.7rem;letter-spacing:.17em;text-transform:uppercase;font-weight:600;color:var(--terra);display:block}
+.h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,7.4vw,3.2rem);line-height:1.12;letter-spacing:-.01em;text-wrap:balance}
+.lead{color:var(--muted);font-size:1.05rem;max-width:34em}
+section{position:relative}
+.sec{padding:84px 0;overflow-x:clip}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:15px 28px;border-radius:999px;font-weight:600;font-size:.98rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .3s,color .3s,transform .3s,box-shadow .3s;line-height:1.2;text-align:center}
+.btn-terra{background:var(--terra);color:#fff;box-shadow:0 10px 24px -12px rgba(184,101,79,.8)}
+.btn-terra:hover{background:var(--terra-d);transform:translateY(-2px)}
+.btn-line{border-color:var(--plum);color:var(--plum);background:transparent}
+.btn-line:hover{background:var(--plum);color:var(--cream)}
+.btn-sm{padding:10px 20px;font-size:.88rem}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--nav-h);display:flex;align-items:center;background:transparent;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);transition:background .35s,box-shadow .35s}
+.nav.scrolled{background:var(--cream);box-shadow:0 1px 0 var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:block;line-height:0;text-decoration:none}
+.brand svg{height:36px;width:auto;overflow:visible}
+.nav-links{display:none;gap:34px}
+.nav-links a{text-decoration:none;font-size:.93rem;font-weight:500;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1.5px;background:var(--terra);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-cta{display:none}
+.burger{width:44px;height:44px;border:0;background:transparent;position:relative;cursor:pointer;z-index:120}
+.burger span{position:absolute;left:11px;right:11px;height:2px;background:var(--plum);border-radius:2px;transition:transform .35s,top .35s,opacity .3s}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.menu-open .burger span:nth-child(1){top:22px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){opacity:0}
+.menu-open .burger span:nth-child(3){top:22px;transform:rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:110;background:var(--cream);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;padding:90px 24px 40px;visibility:hidden;opacity:0;transition:opacity .4s,visibility .4s}
+.menu-open .menu{visibility:visible;opacity:1}
+.menu a.ml{font-family:var(--serif);font-size:2rem;text-decoration:none;padding:10px 0}
+.menu .btn{margin-top:24px}
+.menu-open{overflow:hidden}
+.menu-open .nav{background:transparent;box-shadow:none}
+@media(min-width:900px){
+  :root{--nav-h:76px}
+  .nav-links{display:flex}.nav-cta{display:inline-flex}.burger{display:none}.menu{display:none}
+  .brand svg{height:42px}
+}
+@media(min-width:480px) and (max-width:899px){.nav-cta{display:inline-flex}}
+
+/* HERO */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 36px) 0 90px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform}
+.b1{width:420px;height:420px;background:var(--sand);top:-120px;right:-140px;opacity:.95}
+.b2{width:360px;height:360px;background:var(--sage);opacity:.35;bottom:-120px;left:-140px}
+.b3{width:260px;height:260px;background:var(--sand);opacity:.7;top:46%;left:52%}
+.hero .wrap{position:relative;z-index:2}
+.hero-in{max-width:760px}
+.hero .eyebrow{margin-bottom:22px;font-size:.66rem}
+.hero h1{font-family:var(--serif);font-weight:350;font-size:clamp(2.7rem,12.2vw,5.8rem);line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--terra);font-weight:300}
+.hero .sub{margin-top:26px;font-size:1.08rem;color:var(--muted);max-width:33em}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 15px;border-radius:999px;background:rgba(233,211,200,.7);font-size:.88rem;font-weight:500}
+.pill .ic{width:14px;height:14px;color:var(--terra)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;margin-top:30px;font-size:.9rem;color:var(--muted)}
+.stars{color:var(--star);letter-spacing:2px;font-size:1.05rem}
+.proof strong{color:var(--plum);font-weight:600}
+
+/* SOBRE MI */
+.about{background:var(--cream)}
+.about-grid{display:grid;gap:40px}
+.photo{position:relative;border-radius:36px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(59,43,51,.45);aspect-ratio:4/4.6;background:linear-gradient(145deg,var(--sand),var(--sage))}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo.img-fallback{background:linear-gradient(145deg,var(--sand) 0%,#d4b9a9 55%,var(--sage) 100%)}
+.about .h2{margin:12px 0 22px}
+.about p+p{margin-top:16px}
+.about-txt p{color:#4d3d45}
+.badges{display:flex;flex-direction:column;gap:10px;margin-top:30px;align-items:flex-start}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--sand);padding:9px 18px 9px 10px;border-radius:999px;font-size:.9rem;font-weight:500}
+.badge i{width:26px;height:26px;border-radius:50%;background:var(--cream);display:grid;place-items:center;color:var(--sage);flex:none}
+.badge .ic{width:14px;height:14px;stroke-width:3}
+@media(min-width:900px){
+  .about-grid{grid-template-columns:5fr 6fr;gap:80px;align-items:center}
+  .badges{flex-direction:row;flex-wrap:wrap}
+}
+
+/* SERVICIOS */
+.services{background:linear-gradient(var(--cream),var(--sand-l) 30%,var(--cream));padding-bottom:110px}
+.svc-head{text-align:center;max-width:620px;margin:0 auto 26px}
+.svc-head .h2{margin:12px 0 14px}
+.svc-head .lead{margin:0 auto}
+.tabs{position:sticky;top:var(--nav-h);z-index:40;padding:10px 0;margin:0 calc(var(--gutter) * -1) 28px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);background:rgba(251,246,241,.82)}
+.tabs-in{display:flex;justify-content:center;gap:8px;padding:0 var(--gutter)}
+.tab{flex:0 1 auto;padding:10px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;text-decoration:none;font-size:.88rem;font-weight:600;transition:all .3s;white-space:nowrap}
+.tab.on{background:var(--plum);color:var(--cream);border-color:var(--plum)}
+.svc{border-radius:36px;padding:30px 22px;margin-bottom:28px;scroll-margin-top:calc(var(--nav-h) + 74px);position:relative;overflow:hidden}
+.svc .eyebrow{margin-bottom:14px}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.65rem,6.2vw,2.5rem);line-height:1.15;margin-bottom:16px;text-wrap:balance}
+.svc-p{color:#4d3d45;max-width:36em}
+.svc h4{font-family:var(--serif);font-weight:500;font-size:1.15rem;margin:26px 0 14px}
+.svc-a{background:#fff;box-shadow:0 30px 70px -45px rgba(59,43,51,.35)}
+.svc-b{background:var(--sand-l)}
+.svc-c{background:var(--sage-l)}
+.svc-img{border-radius:26px;overflow:hidden;aspect-ratio:16/10;margin-top:28px;background:linear-gradient(135deg,var(--sage),var(--sand))}
+.svc-img img{width:100%;height:100%;object-fit:cover}
+.svc-img.img-fallback{background:linear-gradient(135deg,var(--sand),var(--sage))}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:9px 15px 9px 11px;border-radius:999px;background:var(--cream);border:1px solid var(--line);font-size:.9rem;line-height:1.3}
+.chip .ic{width:15px;height:15px;color:var(--sage);stroke-width:3}
+.svc-end{margin-top:22px;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--terra)}
+.svc .btn{margin-top:26px}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(59,43,51,.1)}
+.checks li:last-child{border-bottom:0}
+.checks .ic{width:18px;height:18px;margin-top:3px;color:var(--sage);stroke-width:3}
+.price{display:flex;flex-wrap:wrap;gap:10px 28px;background:var(--sand);border-radius:22px;padding:20px 24px;margin-top:26px}
+.price div{display:flex;flex-direction:column}
+.price span{font-size:.82rem;letter-spacing:.04em;color:var(--muted)}
+.price strong{font-family:var(--serif);font-weight:500;font-size:2rem;line-height:1.2}
+.price .alt strong{font-size:1.5rem;color:#5a4850}
+.svc-c .price{background:var(--cream)}
+.hl{display:flex;gap:10px;align-items:center;margin-top:22px;font-weight:600;font-size:.95rem}
+.hl .ic{color:var(--terra);width:20px;height:20px}
+/* timeline */
+.tl{position:relative;margin-top:30px;padding-left:64px}
+.tl-line{position:absolute;left:21px;top:22px;bottom:30px;width:2px;background:rgba(184,101,79,.22);border-radius:2px}
+.tl-fill{position:absolute;inset:0;background:var(--terra);transform-origin:top;border-radius:2px}
+.tl-step{position:relative;padding-bottom:28px}
+.tl-step:last-child{padding-bottom:0}
+.tl-n{position:absolute;left:-64px;top:0;width:44px;height:44px;border-radius:50%;background:var(--terra);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:1.2rem;box-shadow:0 0 0 6px var(--sand-l)}
+.tl-step h5{margin:0 0 6px;font-family:var(--serif);font-weight:500;font-size:1.25rem;padding-top:8px}
+.tl-step p{color:#4d3d45;font-size:.97rem}
+@media(min-width:900px){
+  .tabs{margin:0 0 36px;border-radius:999px;width:max-content;margin-left:auto;margin-right:auto;padding:8px}
+  .tabs-in{padding:0}
+  .tab{padding:10px 28px}
+  .svc{padding:56px 56px;margin-bottom:40px}
+  .svc-a .grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .svc-a .svc-img{margin-top:0;aspect-ratio:4/5}
+  .svc-b .grid2{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .svc-b .tl{margin-top:8px}
+  .svc-c .grid2{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .svc-c h4{margin-top:0}
+}
+
+/* QUOTE */
+.quote{background:var(--plum);color:var(--cream);padding:100px 0;text-align:center;overflow:hidden}
+.quote blockquote{margin:0 auto;max-width:860px;font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,6.2vw,3rem);line-height:1.25;text-wrap:balance}
+.quote cite{display:block;margin-top:26px;font-style:normal;font-size:.9rem;letter-spacing:.14em;opacity:.7}
+.quote .qb{background:var(--terra);opacity:.22;width:340px;height:340px;top:-140px;left:-100px}
+
+/* REVIEWS */
+.reviews .head{text-align:center;margin-bottom:38px}
+.reviews .h2{margin-bottom:10px}
+.reviews .head p{color:var(--muted)}
+.rv{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--gutter) 22px;margin:0 calc(var(--gutter) * -1);scrollbar-width:none;scroll-padding:0 var(--gutter)}
+.rv::-webkit-scrollbar{display:none}
+.card{flex:0 0 84%;scroll-snap-align:center;background:#fff;border-radius:16px;padding:24px 22px;box-shadow:0 14px 40px -22px rgba(59,43,51,.4);display:flex;flex-direction:column;gap:10px}
+.card-top{display:flex;align-items:center;gap:12px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--sand);color:var(--plum);display:grid;place-items:center;font-family:var(--serif);font-size:1.2rem;font-weight:500;flex:none}
+.who{min-width:0}
+.who b{display:block;line-height:1.25;overflow-wrap:anywhere}
+.g{display:flex;align-items:center;gap:5px;font-size:.78rem;color:var(--muted)}
+.g svg{width:14px;height:14px}
+.card .stars{font-size:1rem}
+.card p{color:#4d3d45;font-size:.97rem;flex:1}
+.date{font-size:.8rem;color:#8d8085}
+.dots{display:flex;justify-content:center;gap:8px;margin-top:4px}
+.dots button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:rgba(59,43,51,.2);transition:all .3s;cursor:pointer}
+.dots button.on{background:var(--terra);width:22px;border-radius:8px}
+@media(min-width:900px){
+  .rv{display:grid;grid-template-columns:1fr 1fr;gap:22px;overflow:visible;padding:0;margin:0}
+  .card{padding:30px 32px}
+  .dots{display:none}
+}
+
+/* CONTACT */
+.contact{background:var(--sand-l);padding-bottom:130px;overflow:hidden}
+.contact .head{text-align:center;max-width:600px;margin:0 auto 40px}
+.contact .head .h2{margin-bottom:12px}
+.cgrid{display:grid;gap:20px}
+.panel{background:#fff;border-radius:28px;padding:28px 22px;box-shadow:0 20px 50px -34px rgba(59,43,51,.4)}
+.panel h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;margin-bottom:18px}
+label{display:block;font-size:.85rem;font-weight:600;margin:0 0 6px}
+input,textarea{width:100%;font:inherit;font-size:16px;color:var(--plum);background:var(--cream);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;margin-bottom:16px;transition:border-color .3s,box-shadow .3s;resize:vertical}
+input:focus,textarea:focus{outline:0;border-color:var(--terra);box-shadow:0 0 0 4px rgba(184,101,79,.14)}
+.note{font-size:.8rem;color:var(--muted);margin-top:14px;line-height:1.5}
+.cinfo{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.cinfo li{display:flex;gap:13px;align-items:flex-start;line-height:1.45}
+.cinfo li i{width:38px;height:38px;border-radius:50%;background:var(--sage-l);color:var(--sage);display:grid;place-items:center;flex:none}
+.cinfo li i .ic{width:17px;height:17px}
+.cinfo li span{padding-top:7px;min-width:0;overflow-wrap:anywhere}
+.cinfo a{text-decoration:none;font-weight:500;border-bottom:1px solid rgba(184,101,79,.4)}
+.cbtns{display:flex;flex-direction:column;gap:10px}
+.cb{display:flex;align-items:center;justify-content:center;gap:11px;padding:16px 18px;border-radius:12px;color:#fff;text-decoration:none;font-weight:600;border:0;cursor:pointer;width:100%;font-size:1rem;transition:transform .3s,filter .3s;text-align:center}
+.cb:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.cb .icf,.cb .ic{width:21px;height:21px}
+.cb-wa{background:var(--wa)}
+.cb-ph{background:var(--plum)}
+.cb-ig{background:linear-gradient(45deg,#833AB4,#FD1D1D,#FCAF45)}
+@media(min-width:900px){
+  .cgrid{grid-template-columns:1.05fr 1fr;gap:28px;align-items:start}
+  .panel{padding:40px}
+}
+
+/* FOOTER */
+.foot{background:var(--cream);padding:64px 0 120px;text-align:center;border-top:1px solid var(--line)}
+.foot .brand-big{display:inline-block;line-height:0}
+.foot .brand-big svg{width:min(330px,88vw);height:auto}
+.foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;margin:30px 0 22px}
+.foot nav a{text-decoration:none;font-size:.92rem;font-weight:500}
+.foot nav a:hover{color:var(--terra)}
+.fic{display:flex;justify-content:center;gap:12px;margin-bottom:26px}
+.fic a{width:44px;height:44px;border-radius:50%;background:var(--sand);display:grid;place-items:center;color:var(--plum);transition:background .3s,color .3s}
+.fic a:hover{background:var(--terra);color:#fff}
+.foot .loc{font-size:.9rem;color:var(--muted);margin-bottom:6px}
+.foot small{display:block;font-size:.82rem;color:var(--muted)}
+.credit{margin-top:22px;font-size:.72rem;color:#c8bfba;letter-spacing:.04em}
+
+/* FLOATERS */
+.fab{position:fixed;bottom:16px;z-index:90;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 10px 26px -8px rgba(0,0,0,.4);text-decoration:none;transition:opacity .4s,transform .4s,visibility .4s}
+.fab .icf,.fab .ic{width:27px;height:27px}
+.fab-wa{right:16px;background:var(--wa);animation:pulse 15s ease-out infinite}
+.fab-ig{left:16px;background:linear-gradient(45deg,#833AB4,#FD1D1D,#FCAF45)}
+.fab:hover{transform:scale(1.06)}
+.fab .tip{position:absolute;bottom:calc(100% + 10px);background:var(--plum);color:var(--cream);font-size:.78rem;font-weight:500;padding:6px 11px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transform:translateY(4px);transition:all .3s}
+.fab-wa .tip{right:0}.fab-ig .tip{left:0}
+.fab:hover .tip,.fab:focus-visible .tip{opacity:1;transform:none}
+@keyframes pulse{0%{box-shadow:0 10px 26px -8px rgba(0,0,0,.4),0 0 0 0 rgba(37,211,102,.55)}5%{box-shadow:0 10px 26px -8px rgba(0,0,0,.4),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 10px 26px -8px rgba(0,0,0,.4),0 0 0 0 rgba(37,211,102,0)}}
+@media(max-width:699px){.fab.hide{opacity:0;visibility:hidden;transform:scale(.8)}}
+@media(min-width:900px){.fab{bottom:26px;width:58px;height:58px}.fab-wa{right:26px}.fab-ig{left:26px}}
+
+/* ANIMATION STATES — only when GSAP is ready */
+body.js-ready .a-up,body.js-ready .a-hero{opacity:0;transform:translateY(26px)}
+body.js-ready .a-l{opacity:0;transform:translateX(-34px)}
+body.js-ready .a-r{opacity:0;transform:translateX(34px)}
+body.js-ready .a-pop{opacity:0;transform:scale(.95)}
+body.js-ready .tl-fill{transform:scaleY(0)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Sprite de iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+    <!-- símbolo del logo: dos arcos que se abrazan -->
+    <symbol id="logo-mark" viewBox="0 0 40 40"><path d="M20 4C32 7 37 24 21 36" fill="none" stroke="#B8654F" stroke-width="2.4" stroke-linecap="round"/><path d="M20 4C8 7 3 24 19 36" fill="none" stroke="#B8654F" stroke-width="2.4" stroke-linecap="round" opacity=".6" transform="rotate(8 20 20)"/></symbol>
+  </defs>
+</svg>
+
+<!-- NAVBAR -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="María Mieres — inicio">
+      <svg viewBox="0 0 196 40" role="img" aria-label="María Mieres">
+        <use href="#logo-mark" x="0" y="0" width="40" height="40"/>
+        <text x="50" y="27" font-family="Fraunces, Georgia, serif" font-size="25" font-weight="400" fill="#3B2B33" letter-spacing="-.2">María Mieres</text>
+      </svg>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#contacto" class="btn btn-terra btn-sm nav-cta">Pedir cita</a>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="menu" id="menu" aria-hidden="true">
+  <a class="ml" href="#sobre-mi">Sobre mí</a>
+  <a class="ml" href="#servicios">Servicios</a>
+  <a class="ml" href="#opiniones">Opiniones</a>
+  <a class="ml" href="#contacto">Contacto</a>
+  <a class="btn btn-terra" href="#contacto">Pedir cita</a>
+</div>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <span class="eyebrow a-hero">Fisioterapia de suelo pélvico · Sexología</span>
+      <h1 class="a-hero">Un espacio seguro para comprender <em>tu cuerpo.</em></h1>
+      <p class="sub a-hero">Soy María Mieres. Te acompaño a cuidar tu suelo pélvico, tu bienestar y tu salud sexual, en consulta o desde donde estés.</p>
+      <div class="pills a-hero" aria-label="Dónde trabajo">
+        <span class="pill"><svg class="ic"><use href="#i-pin"/></svg>Gijón</span>
+        <span class="pill"><svg class="ic"><use href="#i-pin"/></svg>Avilés</span>
+        <span class="pill"><svg class="ic"><use href="#i-pin"/></svg>Online</span>
+      </div>
+      <div class="hero-cta a-hero">
+        <a class="btn btn-terra" href="#contacto">Pedir cita</a>
+        <a class="btn btn-line" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="proof a-hero"><span class="stars" aria-hidden="true">★★★★★</span><span><strong>5,0</strong> · 15 reseñas en Google</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section class="sec about" id="sobre-mi">
+  <div class="wrap about-grid">
+    <!-- SUSTITUIR POR FOTO REAL DE MARÍA -->
+    <div class="photo a-l">
+      <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=75" alt="Manos que se sostienen con cuidado" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('img-fallback')">
+    </div>
+    <div class="about-txt a-r">
+      <span class="eyebrow">Sobre mí</span>
+      <h2 class="h2">Hola, soy María Mieres</h2>
+      <p>Fisioterapeuta especializada en suelo pélvico y sexóloga, nacida en Gijón (Asturias). Me gradué en Fisioterapia por la Universidad de Cantabria y continué mi formación especializándome en suelo pélvico y sexología, con el objetivo de ofrecer un abordaje integral de la salud íntima femenina.</p>
+      <p>A lo largo de mi trayectoria he trabajado en Asturias, Madrid y Mallorca, acompañando a mujeres en diferentes etapas de su vida y ampliando continuamente mi formación en embarazo, posparto, diástasis abdominal, ejercicio terapéutico, disfunciones del suelo pélvico y sexualidad.</p>
+      <p>Quiero ofrecerte un espacio seguro donde comprender tu cuerpo, resolver tus dudas y encontrar herramientas para mejorar tu bienestar, tu salud y tu placer.</p>
+      <div class="badges">
+        <span class="badge"><i><svg class="ic"><use href="#i-check"/></svg></i>Fisioterapeuta · Universidad de Cantabria</span>
+        <span class="badge"><i><svg class="ic"><use href="#i-check"/></svg></i>Especialista en suelo pélvico</span>
+        <span class="badge"><i><svg class="ic"><use href="#i-check"/></svg></i>Sexóloga</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="sec services" id="servicios">
+  <div class="wrap">
+    <div class="svc-head a-up">
+      <span class="eyebrow">Servicios</span>
+      <h2 class="h2">¿En qué puedo ayudarte?</h2>
+      <p class="lead">Tres formas de trabajar juntas, adaptadas a lo que necesitas</p>
+    </div>
+
+    <div class="tabs"><div class="tabs-in">
+      <a class="tab on" href="#presencial" data-t="presencial">Presencial</a>
+      <a class="tab" href="#sexologia" data-t="sexologia">Sexología</a>
+      <a class="tab" href="#online" data-t="online">Online</a>
+    </div></div>
+
+    <!-- A -->
+    <article class="svc svc-a a-up" id="presencial">
+      <div class="grid2">
+        <div>
+          <span class="eyebrow">Presencial · Gijón y Avilés</span>
+          <h3>Fisioterapia y rehabilitación abdominopélvica</h3>
+          <p class="svc-p">Un espacio especializado para cuidar tu cuerpo, prevenir molestias y mejorar tu bienestar íntimo y físico.</p>
+          <h4>¿En qué casos puede venirte bien?</h4>
+          <ul class="chips" id="chipsA">
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Embarazo y preparación al parto</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Posparto y recuperación</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Cesárea, episiotomía o desgarro</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Tratamiento de cicatrices</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Pérdidas de orina</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Sensación de peso pélvico y prolapsos</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Diástasis abdominal</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Dolor pélvico</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Molestias en las relaciones sexuales</li>
+            <li class="chip a-up"><svg class="ic"><use href="#i-check"/></svg>Volver al ejercicio de forma segura</li>
+          </ul>
+          <p class="svc-end">Valoración y tratamiento personalizado.</p>
+          <a class="btn btn-terra" href="https://wa.me/34620037161?text=%C2%A1Buenas!%20Me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita</a>
+        </div>
+        <div class="svc-img">
+          <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=900&q=75" alt="Esterilla de ejercicio terapéutico en una sala luminosa" loading="lazy" onerror="this.style.display='none';this.parentNode.classList.add('img-fallback')">
+        </div>
+      </div>
+    </article>
+
+    <!-- B -->
+    <article class="svc svc-b a-up" id="sexologia">
+      <div class="grid2">
+        <div>
+          <span class="eyebrow">Sexología + suelo pélvico</span>
+          <h3>Pack 3 sesiones de sexología</h3>
+          <p class="svc-p">Un servicio integral de sexología y fisioterapia de suelo pélvico para mujeres que quieren cuidar su bienestar íntimo desde una mirada global.</p>
+          <p class="hl"><svg class="ic"><use href="#i-spark"/></svg>Seguimiento por WhatsApp entre sesiones</p>
+          <div class="price">
+            <div><span>Pack completo</span><strong>155€</strong></div>
+            <div class="alt"><span>Sesión individual</span><strong>60€</strong></div>
+          </div>
+          <a class="btn btn-terra" href="https://wa.me/34620037161?text=%C2%A1Buenas!%20Me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Reservar el pack</a>
+        </div>
+        <div class="tl" id="tl">
+          <div class="tl-line"><div class="tl-fill" id="tlFill"></div></div>
+          <div class="tl-step a-up"><span class="tl-n">1</span><h5>Entrevista</h5><p>Espacio de escucha y confianza donde hablamos sobre tu historia, experiencias, dudas y objetivos. Te llevarás primeras pautas y herramientas personalizadas.</p></div>
+          <div class="tl-step a-up"><span class="tl-n">2</span><h5>Exploración física</h5><p>Valoración individualizada del suelo pélvico y tratamiento adaptado a ti.</p></div>
+          <div class="tl-step a-up"><span class="tl-n">3</span><h5>Seguimiento y reajuste</h5><p>Sesión de seguimiento a los 2 meses para valorar cambios, resolver dudas y reajustar pautas según tu evolución.</p></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- C -->
+    <article class="svc svc-c a-up" id="online">
+      <div class="grid2">
+        <div>
+          <span class="eyebrow">Online · Desde donde estés</span>
+          <h3>Sesiones online de sexología y suelo pélvico</h3>
+          <p class="svc-p">Un espacio seguro, cercano y confidencial para cuidar tu salud sexual y resolver las dudas o dificultades que estén afectando a tu bienestar.</p>
+          <div class="price"><div><span>Sesión online</span><strong>45€</strong></div></div>
+          <a class="btn btn-terra" href="https://wa.me/34620037161?text=%C2%A1Buenas!%20Me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Reservar sesión online</a>
+        </div>
+        <div>
+          <h4>Te acompaño en situaciones como:</h4>
+          <ul class="checks" id="checksC">
+            <li class="a-up"><svg class="ic"><use href="#i-check"/></svg>Dolor en las relaciones sexuales</li>
+            <li class="a-up"><svg class="ic"><use href="#i-check"/></svg>Disminución del deseo, dificultades de excitación u orgasmo</li>
+            <li class="a-up"><svg class="ic"><use href="#i-check"/></svg>Vaginismo</li>
+            <li class="a-up"><svg class="ic"><use href="#i-check"/></svg>Miedo o ansiedad relacionados con la sexualidad</li>
+            <li class="a-up"><svg class="ic"><use href="#i-check"/></svg>Dudas sobre salud sexual y educación sexual</li>
+            <li class="a-up"><svg class="ic"><use href="#i-check"/></svg>Disfunciones de suelo pélvico que pueden abordarse online</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- FRASE -->
+<section class="quote">
+  <div class="blob qb"></div>
+  <div class="wrap" style="position:relative">
+    <div class="a-up">
+      <blockquote>Mi forma de trabajar se basa en la evidencia científica, la cercanía y la escucha.</blockquote>
+      <cite>— María Mieres</cite>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONES -->
+<section class="sec reviews" id="opiniones">
+  <div class="wrap">
+    <div class="head a-up">
+      <span class="eyebrow">Opiniones</span>
+      <h2 class="h2">Lo que dicen mis pacientes</h2>
+      <p>5,0 de media · 15 reseñas en Google</p>
+    </div>
+    <div class="rv" id="rv">
+      <article class="card a-pop">
+        <div class="card-top"><span class="av" aria-hidden="true">S</span><div class="who"><b>Sara</b><span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>Google</span></div></div>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p>Una excelente profesional, muy cercana, muy agradable y extremadamente eficiente. Unos resultado rapidísimos y muy buenos</p>
+        <span class="date">Hace una semana</span>
+      </article>
+      <article class="card a-pop">
+        <div class="card-top"><span class="av" aria-hidden="true">R</span><div class="who"><b>Rocio Perez</b><span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>Google</span></div></div>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p>La recuperación de mi cesárea ha sido genial gracias a María. Muy buena profesional y cercana. 100% recomendable!!</p>
+        <span class="date">Hace 2 meses</span>
+      </article>
+      <article class="card a-pop">
+        <div class="card-top"><span class="av" aria-hidden="true">S</span><div class="who"><b>Sandra Schoolaert Rivero</b><span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>Google</span></div></div>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p>Llevo unos 3 meses con María, y la experiencia no puede ser más positiva. Sufría de infecciones de orina de repetición, y ha sido ponerme en sus manos y he mejorado un montón. Totalmente recomendable. Una gran profesional</p>
+        <span class="date">Hace 2 meses</span>
+      </article>
+      <article class="card a-pop">
+        <div class="card-top"><span class="av" aria-hidden="true">M</span><div class="who"><b>Myriam Herrero villardon</b><span class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>Google</span></div></div>
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p>No pensé en acudir nunca a un especialista en suelo pélvico pensé que no era tan importante , y la verdad que si das con alguien tan profesional y con tanta atención es algo que te cambia a nivel postparto y a otros niveles si eres una persona deportista . Un 10 de profesionalidad , atención y explicaciones detalladas .</p>
+        <span class="date">Hace 2 meses</span>
+      </article>
+    </div>
+    <div class="dots" id="dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="sec contact" id="contacto">
+  <div class="blob b2" style="opacity:.25;bottom:-160px;left:auto;right:-140px"></div>
+  <div class="wrap" style="position:relative">
+    <div class="head a-up">
+      <span class="eyebrow">Contacto</span>
+      <h2 class="h2">Cuéntame tu caso</h2>
+      <p class="lead" style="margin:0 auto">¿Tienes dudas? Escríbeme sin compromiso y vemos cómo puedo ayudarte.</p>
+    </div>
+    <div class="cgrid">
+      <div class="panel a-up">
+        <h3>Escríbeme unas líneas</h3>
+        <form id="waForm" novalidate>
+          <label for="fn">Tu nombre</label>
+          <input id="fn" name="nombre" type="text" autocomplete="given-name">
+          <label for="fm">¿En qué puedo ayudarte?</label>
+          <textarea id="fm" name="mensaje" rows="4"></textarea>
+          <button type="submit" class="cb cb-wa"><svg class="icf"><use href="#i-wa"/></svg>Enviar por WhatsApp</button>
+        </form>
+        <p class="note">Tu mensaje se envía directamente a María por WhatsApp. Esta web no guarda ningún dato.</p>
+      </div>
+      <div class="panel a-up">
+        <ul class="cinfo">
+          <li><i><svg class="ic"><use href="#i-pin"/></svg></i><span>Consulta presencial en Gijón y Avilés · Sesiones online</span></li>
+          <li><i><svg class="ic"><use href="#i-phone"/></svg></i><span><a href="tel:+34620037161">620 03 71 61</a></span></li>
+          <li><i><svg class="ic"><use href="#i-mail"/></svg></i><span><a href="mailto:mariamieres.fisio@gmail.com">mariamieres.fisio@gmail.com</a></span></li>
+          <li><i><svg class="ic"><use href="#i-ig"/></svg></i><span><a href="https://instagram.com/maria_fisiopelvica" target="_blank" rel="noopener">@maria_fisiopelvica</a></span></li>
+        </ul>
+        <div class="cbtns" id="cbtns">
+          <a class="cb cb-wa a-up" href="https://wa.me/34620037161?text=%C2%A1Buenas!%20Me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener"><svg class="icf"><use href="#i-wa"/></svg>Escríbeme por WhatsApp</a>
+          <a class="cb cb-ph a-up" href="tel:+34620037161"><svg class="ic"><use href="#i-phone"/></svg>Llamar: 620 03 71 61</a>
+          <a class="cb cb-ig a-up" href="https://instagram.com/maria_fisiopelvica" target="_blank" rel="noopener"><svg class="ic"><use href="#i-ig"/></svg>Sígueme en Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <a href="#inicio" class="brand-big" aria-label="María Mieres — volver arriba">
+      <svg viewBox="0 0 360 58" role="img" aria-label="María Mieres · Fisioterapia de suelo pélvico · Sexología">
+        <use href="#logo-mark" x="0" y="3" width="46" height="46"/>
+        <text x="58" y="29" font-family="Fraunces, Georgia, serif" font-size="29" fill="#3B2B33" letter-spacing="-.2">María Mieres</text>
+        <text x="59" y="48" font-family="DM Sans, system-ui, sans-serif" font-size="7.4" fill="#3B2B33" textLength="296" lengthAdjust="spacing">FISIOTERAPIA DE SUELO PÉLVICO · SEXOLOGÍA</text>
+      </svg>
+    </a>
+    <nav aria-label="Pie"><a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a></nav>
+    <div class="fic">
+      <a href="tel:+34620037161" aria-label="Llamar al 620 03 71 61"><svg class="ic"><use href="#i-phone"/></svg></a>
+      <a href="https://wa.me/34620037161?text=%C2%A1Buenas!%20Me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="icf"><use href="#i-wa"/></svg></a>
+      <a href="mailto:mariamieres.fisio@gmail.com" aria-label="Email"><svg class="ic"><use href="#i-mail"/></svg></a>
+      <a href="https://instagram.com/maria_fisiopelvica" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ic"><use href="#i-ig"/></svg></a>
+    </div>
+    <p class="loc">Gijón · Avilés · Online</p>
+    <small>© 2026 María Mieres — Fisioterapia de suelo pélvico y Sexología</small>
+    <p class="credit">Creada por Baxia Agency</p>
+  </div>
+</footer>
+
+<!-- Botones flotantes -->
+<a class="fab fab-ig" id="fabIg" href="https://instagram.com/maria_fisiopelvica" target="_blank" rel="noopener" aria-label="Sígueme en Instagram"><svg class="ic"><use href="#i-ig"/></svg><span class="tip">Sígueme en Instagram</span></a>
+<a class="fab fab-wa" id="fabWa" href="https://wa.me/34620037161?text=%C2%A1Buenas!%20Me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp"><svg class="icf"><use href="#i-wa"/></svg><span class="tip">Escríbeme</span></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* Navbar: fondo sólido al hacer scroll */
+  var nav=$('#nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>30)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  /* Menú móvil */
+  var burger=$('#burger'),menu=$('#menu');
+  function setMenu(o){document.body.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o);menu.setAttribute('aria-hidden',!o)}
+  burger.addEventListener('click',function(){setMenu(!document.body.classList.contains('menu-open'))});
+  $$('a',menu).forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+  window.addEventListener('resize',function(){if(innerWidth>=900)setMenu(false)});
+
+  /* Pestañas de servicios: resalta la activa */
+  if('IntersectionObserver' in window){
+    var tabs=$$('.tab');
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){tabs.forEach(function(t){t.classList.toggle('on',t.dataset.t===e.target.id)})}
+    })},{rootMargin:'-35% 0px -55% 0px'});
+    ['presencial','sexologia','online'].forEach(function(id){io.observe(document.getElementById(id))});
+
+    /* Oculta los flotantes en móvil mientras se ve el bloque de contacto (que ya tiene sus propios botones) */
+    var fabs=$$('.fab');
+    new IntersectionObserver(function(es){es.forEach(function(e){
+      fabs.forEach(function(f){f.classList.toggle('hide',e.isIntersecting)})
+    })},{rootMargin:'0px 0px -15% 0px',threshold:0}).observe($('#contacto .cgrid'));
+  }
+
+  /* Carrusel de reseñas: puntos */
+  var rv=$('#rv'),dots=$('#dots'),cards=$$('.card',rv);
+  cards.forEach(function(_,i){
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Reseña '+(i+1));
+    b.addEventListener('click',function(){rv.scrollTo({left:cards[i].offsetLeft-rv.offsetLeft-20,behavior:'smooth'})});
+    dots.appendChild(b)});
+  var dbs=$$('button',dots);
+  function setDot(){
+    var c=rv.scrollLeft+rv.clientWidth/2,best=0,bd=1e9;
+    cards.forEach(function(k,i){var d=Math.abs(k.offsetLeft-rv.offsetLeft+k.offsetWidth/2-c);if(d<bd){bd=d;best=i}});
+    dbs.forEach(function(d,i){d.classList.toggle('on',i===best)})
+  }
+  rv.addEventListener('scroll',function(){requestAnimationFrame(setDot)},{passive:true});setDot();
+
+  /* Formulario → WhatsApp (sin backend) */
+  function sendWA(e){
+    if(e)e.preventDefault();
+    var n=$('#fn').value.trim(),m=$('#fm').value.trim(),t;
+    if(!n&&!m)t='¡Buenas! Me gustaría pedir cita';
+    else t='¡Buenas! '+(n?'Soy '+n+'. ':'')+m;
+    window.open('https://wa.me/34620037161?text='+encodeURIComponent(t.trim()),'_blank','noopener');
+  }
+  $('#waForm').addEventListener('submit',sendWA);
+
+  /* GSAP */
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!window.gsap||!window.ScrollTrigger)return;
+  gsap.registerPlugin(ScrollTrigger);
+  document.body.classList.add('js-ready');
+  gsap.defaults({ease:'power2.out',duration:.75});
+
+  /* Hero: entrada escalonada + formas a la deriva */
+  gsap.to('.a-hero',{opacity:1,y:0,stagger:.15,delay:.15,duration:.85});
+  gsap.to('.b1',{x:-60,y:50,scale:1.12,duration:16,yoyo:true,repeat:-1,ease:'sine.inOut'});
+  gsap.to('.b2',{x:70,y:-40,scale:1.15,duration:18,yoyo:true,repeat:-1,ease:'sine.inOut'});
+  gsap.to('.b3',{x:-50,y:-60,scale:.9,duration:13,yoyo:true,repeat:-1,ease:'sine.inOut'});
+
+  function reveal(sel,vars,trig){
+    $$(sel).forEach(function(el){
+      gsap.to(el,Object.assign({scrollTrigger:{trigger:trig?el.closest(trig):el,start:'top 80%',once:true}},vars))
+    })
+  }
+  gsap.to('.a-l',{opacity:1,x:0,duration:.9,scrollTrigger:{trigger:'.about',start:'top 70%',once:true}});
+  gsap.to('.a-r',{opacity:1,x:0,duration:.9,scrollTrigger:{trigger:'.about',start:'top 70%',once:true}});
+
+  /* Cabecera de servicios, bloques, frase, cabeceras de reseñas y contacto */
+  $$('.svc-head,.svc,.quote .a-up,.reviews .head,.contact .head,.contact .panel').forEach(function(el){
+    gsap.to(el,{opacity:1,y:0,scrollTrigger:{trigger:el,start:'top 80%',once:true}})
+  });
+  /* Chips, lista y pasos: stagger .06 */
+  [['#chipsA','.chip'],['#checksC','li'],['#tl','.tl-step']].forEach(function(p){
+    gsap.to($$(p[1],$(p[0])),{opacity:1,y:0,stagger:.06,scrollTrigger:{trigger:p[0],start:'top 80%',once:true}})
+  });
+  /* Línea de tiempo que se dibuja con el scroll */
+  gsap.to('#tlFill',{scaleY:1,ease:'none',scrollTrigger:{trigger:'#tl',start:'top 70%',end:'bottom 70%',scrub:.6}});
+  /* Reseñas */
+  gsap.to('.card',{opacity:1,scale:1,stagger:.1,scrollTrigger:{trigger:'#rv',start:'top 80%',once:true}});
+  /* Botones de contacto */
+  gsap.to('#cbtns .cb',{opacity:1,y:0,stagger:.1,scrollTrigger:{trigger:'#cbtns',start:'top 85%',once:true}});
+
+  window.addEventListener('load',function(){ScrollTrigger.refresh()});
+})();
+</script>
+</body>
+</html>
